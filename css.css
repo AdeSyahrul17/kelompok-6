@@ -1,0 +1,225 @@
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.primary-bg {
+    background-color: #e6f7ff; /* Warna Biru Muda */
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #007bff; /* Biru Primer */
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* CTA BUTTON (Pesan Sekarang) */
+.cta-button {
+    display: inline-block;
+    background-color: #ff6f00; /* Oranye/Aksen */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #e65100;
+}
+
+.large-button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* HERO SECTION (Paling Atas) */
+.hero-section {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Ganti dengan gambar latar belakang jika ada */
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* 1. PENJELASAN PRODUK */
+.product-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.product-text {
+    flex: 1;
+}
+
+.product-image {
+    flex: 1;
+    text-align: right;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 2. FITUR-FITUR */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.feature-item img {
+    width: 60px; /* Ukuran ikon fitur */
+    height: 60px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+/* 3. KOLOM VIDEO */
+.video-placeholder {
+    margin: 30px auto;
+    max-width: 800px;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.video-placeholder iframe {
+    display: block;
+    width: 100%;
+    height: 450px; /* Tinggi video yang cukup besar */
+    border: none;
+    border-radius: 5px;
+}
+
+/* 4. PROMO & CHECKOUT */
+.price-box {
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border: 3px solid #ff6f00;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(255,111,0,0.3);
+}
+
+.original-price {
+    font-size: 1.2em;
+    color: #888;
+}
+
+.discount-info {
+    font-size: 1.5em;
+    color: #dc3545; /* Merah untuk diskon */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.final-price {
+    font-size: 2.5em;
+    color: #28a745; /* Hijau untuk harga final */
+}
+
+.final-price span {
+    font-weight: bolder;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+
+/* MEDIA QUERIES (Responsif) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+
+    /* Penjelasan Produk menjadi vertikal */
+    .product-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-image {
+        order: -1; /* Pindahkan gambar ke atas teks di mobile */
+        margin-bottom: 20px;
+    }
+
+    .video-placeholder iframe {
+        height: 250px; /* Kurangi tinggi video di mobile */
+    }
+}
